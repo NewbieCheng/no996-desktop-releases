@@ -3,7 +3,14 @@
 > 本仓库**仅提供安装包与 DSH 运行时组件**，不含源代码。  
 > 海外镜像：[GitHub Releases](https://github.com/NewbieCheng/no996-desktop-releases/releases) · 国内镜像：[Gitee Releases](https://gitee.com/ZJCACE/no996-desktop-releases/releases)
 
-当前版本：**v0.1.1**（2026-09-08）
+当前版本：**v0.1.3**（2026-09-08）
+
+## v0.1.3 更新摘要
+
+- 修复：macOS Apple Silicon 首次启动 DSH Runtime 中 `fs-ext` 被误打成 x86_64，导致 Harness 退出（code=1）
+- 新增：runtime 打包后对全部 `.node` 做架构校验
+- 改进：重发 `dsh-runtime-macos-arm64.zip`（runtime 版本仍为 **1.0.0**，同名覆盖）；Gitee `runtime` Release 已同步
+- 说明：已安装用户可删除 `~/Library/Application Support/no996/runtime/dsh/`（Windows：`%APPDATA%\no996\runtime\dsh\`）后重启拉取新 runtime
 
 ---
 
@@ -13,14 +20,14 @@
 
 | 平台 | 文件 | 海外（GitHub） | 国内（Gitee） |
 |------|------|----------------|---------------|
-| Windows x64 | `no996-workbench-0.1.1-win-x64.exe` | [下载](https://github.com/NewbieCheng/no996-desktop-releases/releases/download/v0.1.1/no996-workbench-0.1.1-win-x64.exe) | 整包超过 Gitee 100 MB 上限，请用 GitHub 或应用内更新 |
-| macOS Apple Silicon | `no996-workbench-0.1.1-mac-arm64.dmg` | [下载](https://github.com/NewbieCheng/no996-desktop-releases/releases/download/v0.1.1/no996-workbench-0.1.1-mac-arm64.dmg) | 同上，请用 GitHub |
-| 更新清单 | `latest.json` | [latest](https://github.com/NewbieCheng/no996-desktop-releases/releases/download/latest/latest.json) · [v0.1.1](https://github.com/NewbieCheng/no996-desktop-releases/releases/download/v0.1.1/latest.json) | [latest](https://gitee.com/ZJCACE/no996-desktop-releases/releases/download/latest/latest.json) · [v0.1.1](https://gitee.com/ZJCACE/no996-desktop-releases/releases/download/v0.1.1/latest.json) |
+| Windows x64 | `no996-workbench-0.1.3-win-x64.exe` | [下载](https://github.com/NewbieCheng/no996-desktop-releases/releases/download/v0.1.3/no996-workbench-0.1.3-win-x64.exe) | 整包超过 Gitee 100 MB 上限，请用 GitHub 或应用内更新 |
+| macOS Apple Silicon | `no996-workbench-0.1.3-mac-arm64.dmg` | [下载](https://github.com/NewbieCheng/no996-desktop-releases/releases/download/v0.1.3/no996-workbench-0.1.3-mac-arm64.dmg) | 同上，请用 GitHub |
+| 更新清单 | `latest.json` / `release-history.json` | [latest](https://github.com/NewbieCheng/no996-desktop-releases/releases/download/latest/latest.json) · [v0.1.3](https://github.com/NewbieCheng/no996-desktop-releases/releases/download/v0.1.3/latest.json) | [latest](https://gitee.com/ZJCACE/no996-desktop-releases/releases/download/latest/latest.json) · [v0.1.3](https://gitee.com/ZJCACE/no996-desktop-releases/releases/download/v0.1.3/latest.json) |
 
 Release 页面：
 
-- GitHub：[v0.1.1](https://github.com/NewbieCheng/no996-desktop-releases/releases/tag/v0.1.1) · [latest](https://github.com/NewbieCheng/no996-desktop-releases/releases/tag/latest)
-- Gitee：[v0.1.1](https://gitee.com/ZJCACE/no996-desktop-releases/releases/tag/v0.1.1) · [latest](https://gitee.com/ZJCACE/no996-desktop-releases/releases/tag/latest)
+- GitHub：[v0.1.3](https://github.com/NewbieCheng/no996-desktop-releases/releases/tag/v0.1.3) · [latest](https://github.com/NewbieCheng/no996-desktop-releases/releases/tag/latest)
+- Gitee：[v0.1.3](https://gitee.com/ZJCACE/no996-desktop-releases/releases/tag/v0.1.3) · [latest](https://gitee.com/ZJCACE/no996-desktop-releases/releases/tag/latest)
 
 ---
 
@@ -31,7 +38,7 @@ Release 页面：
 | 平台 | 文件 | 海外（GitHub） | 国内（Gitee） |
 |------|------|----------------|---------------|
 | Windows x64 | `dsh-runtime-win-x64.zip` | [下载](https://github.com/NewbieCheng/no996-desktop-releases/releases/download/runtime/dsh-runtime-win-x64.zip) | [下载](https://gitee.com/ZJCACE/no996-desktop-releases/releases/download/runtime/dsh-runtime-win-x64.zip) |
-| macOS arm64 | `dsh-runtime-macos-arm64.zip` | [下载](https://github.com/NewbieCheng/no996-desktop-releases/releases/download/runtime/dsh-runtime-macos-arm64.zip) | 请优先 GitHub（国内网络可开代理） |
+| macOS arm64 | `dsh-runtime-macos-arm64.zip` | [下载](https://github.com/NewbieCheng/no996-desktop-releases/releases/download/runtime/dsh-runtime-macos-arm64.zip) | [下载](https://gitee.com/ZJCACE/no996-desktop-releases/releases/download/runtime/dsh-runtime-macos-arm64.zip) |
 | Manifest | `dsh-runtime-*.manifest.json` | [runtime Release](https://github.com/NewbieCheng/no996-desktop-releases/releases/tag/runtime) | [runtime Release](https://gitee.com/ZJCACE/no996-desktop-releases/releases/tag/runtime) |
 
 Runtime Release 页面：
@@ -54,21 +61,28 @@ Runtime Release 页面：
 > Installers and DSH runtime only — **no source code**.  
 > Overseas: [GitHub Releases](https://github.com/NewbieCheng/no996-desktop-releases/releases) · China mirror: [Gitee Releases](https://gitee.com/ZJCACE/no996-desktop-releases/releases)
 
-Current version: **v0.1.1** (2026-09-08)
+Current version: **v0.1.3** (2026-09-08)
+
+## v0.1.3 highlights
+
+- Fix: macOS Apple Silicon first-run DSH Runtime `fs-ext` was built as x86_64, crashing Harness (exit code 1)
+- Add: post-pack native `.node` arch verification
+- Republished `dsh-runtime-macos-arm64.zip` (runtime **v1.0.0**, same filename); Gitee `runtime` release synced
+- If you cached the bad runtime: delete `runtime/dsh/` and restart, or install app **≥ 0.1.3**
 
 ## Installers
 
 | Platform | GitHub download |
 |----------|-----------------|
-| Windows x64 | https://github.com/NewbieCheng/no996-desktop-releases/releases/download/v0.1.1/no996-workbench-0.1.1-win-x64.exe |
-| macOS Apple Silicon | https://github.com/NewbieCheng/no996-desktop-releases/releases/download/v0.1.1/no996-workbench-0.1.1-mac-arm64.dmg |
+| Windows x64 | https://github.com/NewbieCheng/no996-desktop-releases/releases/download/v0.1.3/no996-workbench-0.1.3-win-x64.exe |
+| macOS Apple Silicon | https://github.com/NewbieCheng/no996-desktop-releases/releases/download/v0.1.3/no996-workbench-0.1.3-mac-arm64.dmg |
 | Update manifest | https://github.com/NewbieCheng/no996-desktop-releases/releases/download/latest/latest.json |
 
 ## DSH runtime (first launch)
 
-| Platform | GitHub download |
-|----------|-----------------|
-| Windows x64 | https://github.com/NewbieCheng/no996-desktop-releases/releases/download/runtime/dsh-runtime-win-x64.zip |
-| macOS arm64 | https://github.com/NewbieCheng/no996-desktop-releases/releases/download/runtime/dsh-runtime-macos-arm64.zip |
+| Platform | GitHub | Gitee |
+|----------|--------|-------|
+| Windows x64 | [zip](https://github.com/NewbieCheng/no996-desktop-releases/releases/download/runtime/dsh-runtime-win-x64.zip) | [zip](https://gitee.com/ZJCACE/no996-desktop-releases/releases/download/runtime/dsh-runtime-win-x64.zip) |
+| macOS arm64 | [zip](https://github.com/NewbieCheng/no996-desktop-releases/releases/download/runtime/dsh-runtime-macos-arm64.zip) | [zip](https://gitee.com/ZJCACE/no996-desktop-releases/releases/download/runtime/dsh-runtime-macos-arm64.zip) |
 
 Gitee mirrors: `https://gitee.com/ZJCACE/no996-desktop-releases/releases/download/<tag>/<file>`
