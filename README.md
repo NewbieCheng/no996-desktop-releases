@@ -1,1 +1,13 @@
-# 不加班智能团 Desktop Releases`n`nPublic binary and runtime-download assets only. No source code is published here.`n
+# 不加班智能团 Desktop – 发行说明
+
+> 此处仅提供公开二进制文件与运行时依赖资源，**不包含任何源代码**。  
+> 所有可执行文件均来自官方构建，请放心下载。
+
+---
+
+
+本软件为闭源商业软件，最终用户许可协议（EULA）详见安装包内的 `LICENSE.txt`。
+
+---
+
+© 2026 不加班智能团 – 让工作更聪明，生活更从容。
