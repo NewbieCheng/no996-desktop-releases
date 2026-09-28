@@ -23,13 +23,13 @@
 | 平台 | 文件 | 海外（GitHub） | 国内（Gitee） |
 |------|------|----------------|---------------|
 | Windows x64 | `no996-workbench-0.3.1-alpha-win-x64.exe` | [下载](https://github.com/NewbieCheng/no996-desktop-releases/releases/download/v0.3.1-alpha/no996-workbench-0.3.1-alpha-win-x64.exe) | 整包超过 Gitee 100 MB 上限，请用 GitHub 或应用内更新 |
-| macOS Apple Silicon | `no996-workbench-0.2.1-mac-arm64.dmg`（本版暂缓，macOS 仍为 0.2.1） | [下载](https://github.com/NewbieCheng/no996-desktop-releases/releases/download/v0.2.1/no996-workbench-0.2.1-mac-arm64.dmg) | 同上，请用 GitHub |
+| macOS Apple Silicon | `no996-workbench-0.3.1-alpha-mac-arm64.dmg` | [下载](https://github.com/NewbieCheng/no996-desktop-releases/releases/download/v0.3.1-alpha/no996-workbench-0.3.1-alpha-mac-arm64.dmg) | 同上，请用 GitHub |
 | 更新清单 | `latest.json` / `release-history.json` | [latest](https://github.com/NewbieCheng/no996-desktop-releases/releases/download/latest/latest.json) · [v0.3.1-alpha](https://github.com/NewbieCheng/no996-desktop-releases/releases/download/v0.3.1-alpha/latest.json) | [latest](https://gitee.com/ZJCACE/no996-desktop-releases/releases/download/latest/latest.json) · [v0.3.1-alpha](https://gitee.com/ZJCACE/no996-desktop-releases/releases/download/v0.3.1-alpha/latest.json) |
 
 ### 平台安装指南
 
 - **Windows 用户**：直接运行 `no996-workbench-0.3.1-alpha-win-x64.exe` 安装（支持 Windows 10/11 64 位）。
-- **macOS 用户**：本版**暂缓发布** macOS 包（Apple Silicon 仍为 0.2.1，应用内检查更新不会提示本版）；需要时可下载 `no996-workbench-0.2.1-mac-arm64.dmg` 双击打开，将「不加班工作台」拖入 `Applications`（应用程序）文件夹即可。适配 macOS 12+ 及 Apple Silicon（M1/M2/M3/M4 系列芯片）；首次启动自动下载 arm64 架构 DSH 智能内核组件。
+- **macOS 用户**：下载 `no996-workbench-0.3.1-alpha-mac-arm64.dmg` 双击打开，将「不加班工作台」拖入 `Applications`（应用程序）文件夹即可。适配 macOS 12+ 及 Apple Silicon（M1/M2/M3/M4 系列芯片）；首次启动自动下载 arm64 架构 DSH 智能内核组件。
 - **覆盖升级**：已安装早期版本的用户可直接覆盖安装，原有账号登录态、工作区文件与会话历史完整保留。
 
 Release 页面：
@@ -113,7 +113,7 @@ Current version: **v0.3.1-alpha** (2026-09-28, Windows + macOS)
 | Platform | File | GitHub download |
 |----------|------|-----------------|
 | Windows x64 | `no996-workbench-0.3.1-alpha-win-x64.exe` | [download](https://github.com/NewbieCheng/no996-desktop-releases/releases/download/v0.3.1-alpha/no996-workbench-0.3.1-alpha-win-x64.exe) |
-| macOS Apple Silicon | `no996-workbench-0.2.1-mac-arm64.dmg` (deferred this version; macOS stays on 0.2.1) | [download](https://github.com/NewbieCheng/no996-desktop-releases/releases/download/v0.2.1/no996-workbench-0.2.1-mac-arm64.dmg) |
+| macOS Apple Silicon | `no996-workbench-0.3.1-alpha-mac-arm64.dmg` | [download](https://github.com/NewbieCheng/no996-desktop-releases/releases/download/v0.3.1-alpha/no996-workbench-0.3.1-alpha-mac-arm64.dmg) |
 | Update manifest | `latest.json` | https://github.com/NewbieCheng/no996-desktop-releases/releases/download/latest/latest.json |
 
 Gitee mirrors `latest.json` + `release-history.json` + runtime; full exe/dmg are GitHub-only (100 MB Gitee limit).
@@ -121,7 +121,7 @@ Gitee mirrors `latest.json` + `release-history.json` + runtime; full exe/dmg are
 ### Platform installation notes
 
 - **Windows users**: Run `no996-workbench-0.3.1-alpha-win-x64.exe` directly (Windows 10/11 x64).
-- **macOS users**: the macOS build is **deferred** for this version (Apple Silicon stays on 0.2.1; the in-app updater will not offer this release). If needed, open `no996-workbench-0.2.1-mac-arm64.dmg` and drag "No996 Workbench" to `Applications`. Requires macOS 12+ on Apple Silicon (M1/M2/M3/M4); first launch automatically downloads the arm64 DSH kernel runtime bundle.
+- **macOS users**: Open `no996-workbench-0.3.1-alpha-mac-arm64.dmg` and drag "No996 Workbench" to `Applications`. Requires macOS 12+ on Apple Silicon (M1/M2/M3/M4); first launch automatically downloads the arm64 DSH kernel runtime bundle.
 - **In-place upgrade**: Safe to install over earlier releases; user accounts, workspace files, and conversation history are preserved.
 
 ## DSH runtime (first launch)
