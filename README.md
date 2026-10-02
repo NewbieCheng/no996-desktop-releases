@@ -3,16 +3,16 @@
 > 本仓库**仅提供安装包与 DSH 运行时组件**，不含源代码。  
 > 海外镜像：[GitHub Releases](https://github.com/NewbieCheng/no996-desktop-releases/releases) · 国内镜像：[Gitee Releases](https://gitee.com/ZJCACE/no996-desktop-releases/releases)
 
-当前版本：**v0.3.1-alpha**（2026-09-28，Windows + macOS）
+当前版本：**v0.3.3-alpha**（2026-10-02，Windows + macOS）
 
-## v0.3.1-alpha 更新摘要
+## v0.3.3-alpha 更新摘要
 
-- **修复：安装包主进程启动即崩** —— `@no996/module-sdk` 根入口不再带 React 成员（主进程经 Node `require` 取纯函数而安装包无 react-dom）；React 成员独立成 `@no996/module-sdk/ui` 子路径，Shell 与全部板块改引 `/ui`；新增根入口零 React 的回归断言与板块边界机检
-- **升级：DSH 内核 `dsh-v0.1.7-rc.2`（`477b4f42`）**，运行时组件升至 **1.5.0**
-- **实装：定时任务与时间上下文**、**桌面托盘后台运行**、**统一快捷键注册表**、**新手引导状态持久化**、**插件管理与实验性能力**
-- **对齐：工具输出多字节代理对截断保护**
+- **优化：侧栏与工作台交互体验** —— 侧栏与工作台交互细节优化，支持多模态预览与会话流控
+- **架构：重组聊天与任务执行流** —— 重构聊天与任务执行流，增强页面自适应与加载动效
+- **双平台：macOS arm64 全量打包就绪** —— 内置全套核心运行环境（DSH 1.6.0、Node 24、Python 3.12、FFmpeg、pnpm 与 13 个 Wheels），首次启动本地释放，离线可用
+- **模块：8 个可选业务板块签名发布** —— 插件市场全套模块均已就位并支持静默升级
 
-> 完整中英双语说明见 [v0.3.1-alpha Release](https://github.com/NewbieCheng/no996-desktop-releases/releases/tag/v0.3.1-alpha)；可直接覆盖安装 0.2.x / 0.1.x。
+> 完整中英双语说明见 [v0.3.3-alpha Release](https://github.com/NewbieCheng/no996-desktop-releases/releases/tag/v0.3.3-alpha)；可直接覆盖安装 0.3.x / 0.2.x / 0.1.x。
 
 ---
 
@@ -22,22 +22,22 @@
 
 | 平台 | 文件 | 海外（GitHub） | 国内（Gitee） |
 |------|------|----------------|---------------|
-| Windows x64 | `no996-workbench-0.3.1-alpha-win-x64.exe` | [下载](https://github.com/NewbieCheng/no996-desktop-releases/releases/download/v0.3.1-alpha/no996-workbench-0.3.1-alpha-win-x64.exe) | 整包超过 Gitee 100 MB 上限，请用 GitHub 或应用内更新 |
-| macOS Apple Silicon（手动安装） | `no996-workbench-0.3.1-alpha-mac-arm64.dmg` | [下载](https://github.com/NewbieCheng/no996-desktop-releases/releases/download/v0.3.1-alpha/no996-workbench-0.3.1-alpha-mac-arm64.dmg) | 同上，请用 GitHub |
-| macOS Apple Silicon（应用内更新下载物，无需手动） | `no996-workbench-0.3.1-alpha-mac-arm64.zip` | [下载](https://github.com/NewbieCheng/no996-desktop-releases/releases/download/v0.3.1-alpha/no996-workbench-0.3.1-alpha-mac-arm64.zip) | 应用内更新自动读取，无需手动 |
-| 更新清单 | `latest.json` / `release-history.json` | [latest](https://github.com/NewbieCheng/no996-desktop-releases/releases/download/latest/latest.json) · [v0.3.1-alpha](https://github.com/NewbieCheng/no996-desktop-releases/releases/download/v0.3.1-alpha/latest.json) | [latest](https://gitee.com/ZJCACE/no996-desktop-releases/releases/download/latest/latest.json) · [v0.3.1-alpha](https://gitee.com/ZJCACE/no996-desktop-releases/releases/download/v0.3.1-alpha/latest.json) |
+| Windows x64 | `no996-workbench-0.3.3-alpha-win-x64.exe` | [下载](https://github.com/NewbieCheng/no996-desktop-releases/releases/download/v0.3.3-alpha/no996-workbench-0.3.3-alpha-win-x64.exe) | 整包超过 Gitee 100 MB 上限，请用 GitHub 或应用内更新 |
+| macOS Apple Silicon（手动安装） | `no996-workbench-0.3.3-alpha-mac-arm64.dmg` | [下载](https://github.com/NewbieCheng/no996-desktop-releases/releases/download/v0.3.3-alpha/no996-workbench-0.3.3-alpha-mac-arm64.dmg) | 同上，请用 GitHub |
+| macOS Apple Silicon（应用内更新下载物，无需手动） | `no996-workbench-0.3.3-alpha-mac-arm64.zip` | [下载](https://github.com/NewbieCheng/no996-desktop-releases/releases/download/v0.3.3-alpha/no996-workbench-0.3.3-alpha-mac-arm64.zip) | 应用内更新自动读取，无需手动 |
+| 更新清单 | `latest.json` / `release-history.json` | [latest](https://github.com/NewbieCheng/no996-desktop-releases/releases/download/latest/latest.json) · [v0.3.3-alpha](https://github.com/NewbieCheng/no996-desktop-releases/releases/download/v0.3.3-alpha/latest.json) | [latest](https://gitee.com/ZJCACE/no996-desktop-releases/releases/download/latest/latest.json) · [v0.3.3-alpha](https://gitee.com/ZJCACE/no996-desktop-releases/releases/download/v0.3.3-alpha/latest.json) |
 
 > 国内镜像（Gitee）**只承载清单文件** `latest.json` / `release-history.json`，整包安装程序（exe/dmg/zip）均因 Gitee 100 MB 附件上限仅在 GitHub 提供。
 
 ### 平台安装指南
 
-- **Windows 用户**：直接运行 `no996-workbench-0.3.1-alpha-win-x64.exe` 安装（支持 Windows 10/11 64 位）。
-- **macOS 用户**：下载 `no996-workbench-0.3.1-alpha-mac-arm64.dmg` 双击打开，将「不加班工作台」拖入 `Applications`（应用程序）文件夹即可。适配 macOS 12+ 及 Apple Silicon（M1/M2/M3/M4 系列芯片）；首次启动自动下载 arm64 架构 DSH 智能内核组件。应用内更新会自动下载 `no996-workbench-0.3.1-alpha-mac-arm64.zip` 并自替换覆盖安装（未签名构建替换时可能弹一次密码授权）。
+- **Windows 用户**：直接运行 `no996-workbench-0.3.3-alpha-win-x64.exe` 安装（支持 Windows 10/11 64 位）。
+- **macOS 用户**：下载 `no996-workbench-0.3.3-alpha-mac-arm64.dmg` 双击打开，将「不加班工作台」拖入 `Applications`（应用程序）文件夹即可。适配 macOS 12+ 及 Apple Silicon（M1/M2/M3/M4 系列芯片）；首次启动本地释放完整运行环境。应用内更新会自动下载 `no996-workbench-0.3.3-alpha-mac-arm64.zip` 并自替换覆盖安装。
 - **覆盖升级**：已安装早期版本的用户可直接覆盖安装，原有账号登录态、工作区文件与会话历史完整保留。
 
 Release 页面：
 
-- GitHub：[v0.3.1-alpha](https://github.com/NewbieCheng/no996-desktop-releases/releases/tag/v0.3.1-alpha) · [latest](https://github.com/NewbieCheng/no996-desktop-releases/releases/tag/latest)
+- GitHub：[v0.3.3-alpha](https://github.com/NewbieCheng/no996-desktop-releases/releases/tag/v0.3.3-alpha) · [latest](https://github.com/NewbieCheng/no996-desktop-releases/releases/tag/latest)
 - Gitee：[v0.3.1-alpha](https://gitee.com/ZJCACE/no996-desktop-releases/releases/tag/v0.3.1-alpha) · [latest](https://gitee.com/ZJCACE/no996-desktop-releases/releases/tag/latest)
 
 ---
@@ -105,7 +105,7 @@ Current version: **v0.3.1-alpha** (2026-09-28, Windows + macOS)
 ## v0.3.1-alpha highlights
 
 - **Fix: packaged Main process crashed on launch** —— the `@no996/module-sdk` root entry no longer pulls in React members (Main `require`s it via Node while the installer ships no react-dom); React members moved to the `@no996/module-sdk/ui` subpath and Shell plus every board import `/ui`. Adds a React-free root-entry regression and a module-boundary gate
-- **DSH kernel upgraded to `dsh-v0.1.7-rc.2` (`477b4f42`)**, runtime component at **1.5.0**
+- **DSH kernel upgraded to `dsh-v0.2.0-rc.2` (`639ed015`)**, runtime component at **1.6.0**; scheduled tasks now come from an upstream optional bundle and are mounted directly
 - **Scheduled tasks & time context**, **desktop tray with background execution**, **unified shortcuts registry**, **onboarding state persistence**, **plugin manager & experimental bundles**
 - **Surrogate-pair protective truncation** for tool output
 
